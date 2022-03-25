@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List App</title>
+    <!-- boxicons stylesheet -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- custom external stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- To do list app -->
+    <div id="container">
+      <!-- heading -->
+      <h3 id="heading">TO DO LIST</h3>
+      <!-- task input division -->
+      <div id="input-division">
+        <input
+          type="text"
+          id="text-box"
+          placeholder="Type the task to be added"
+        />
+        <div id="btn-container">
+          <button id="add-btn" class="btn">Add Task</button>
+          <button id="clr-btn" class="btn">Clear All</button>
+        </div>
+      </div>
+      <!-- filter buttons container -->
+      <div id="filter-btns-container">
+        <span id="all" class="filter-btn active">All</span>
+        <span id="pending" class="filter-btn">Pending</span>
+        <span id="completed" class="filter-btn">Completed</span>
+      </div>
+      <!-- task list container -->
+      <div id="task-list-container">
+        There are no tasks to display
+      </div>
+    </div>
+    <!-- custom external JavaScript -->
+    <script src="./script.js"></script>
+  </body>
+</html>

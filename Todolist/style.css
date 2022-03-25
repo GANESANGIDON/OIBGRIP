@@ -1,0 +1,265 @@
+/* ToDoList */
+
+* {
+  /* to reset browser default css properties */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* css variables */
+:root {
+  --mediumFont: 500 15px arial, sans-serif;
+  --largeFont: 700 20px arial, sans-serif;
+  --primaryBg: lightseagreen;
+  --lightTxt: white;
+  --darkTxt: #121212;
+  --bdrRadius: 3px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primaryBg);
+}
+
+/* app container */
+#container {
+  width: 280px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px grey;
+  background-color: aliceblue;
+}
+
+/* heading */
+#heading {
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--darkTxt);
+  font: var(--largeFont);
+}
+
+/* input fields container */
+#input-division {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* textbox */
+#text-box {
+  height: 30px;
+  padding: 2px 8px;
+  font: var(--mediumFont);
+  border: none;
+  outline: none;
+  border-radius: var(--bdrRadius);
+  box-shadow: 0px 0px 2px grey;
+}
+
+#text-box:focus {
+  outline: 3px solid var(--primaryBg);
+}
+
+/* buttons container */
+#btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* buttons */
+.btn {
+  border: none;
+  outline: none;
+  height: 30px;
+  padding: 5px 10px;
+  color: var(--lightTxt);
+  font: var(--mediumFont);
+  font-weight: 600;
+  background-color: var(--primaryBg);
+  border-radius: var(--bdrRadius);
+  box-shadow: 0px 0px 2px grey;
+  cursor: pointer;
+}
+
+/* add task button */
+#add-btn {
+  flex: 6;
+}
+
+/* clear all button */
+#clr-btn {
+  flex: 4;
+}
+
+/* fiter buttons container */
+#filter-btns-container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* filter buttons */
+.filter-btn {
+  display: inline-block;
+  padding: 2px 5px;
+  color: var(--darkTxt);
+  font: var(--mediumFont);
+  font-weight: 600;
+}
+
+.filter-btn.active {
+  color: var(--primaryBg);
+}
+
+/* task list container */
+#task-list-container {
+  width: 100%;
+  max-height: 60vh;
+  margin-top: 5px;
+  font: var(--mediumFont);
+  overflow-y: scroll;
+}
+
+#task-list-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* checkbox */
+.check-box {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  accent-color: var(--primaryBg);
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+/* lists */
+li {
+  list-style: none;
+}
+
+/* tasks */
+.list-item {
+  position: relative;
+  padding: 6px 25px 6px 25px;
+  margin: 5px 0px;
+  border-radius: var(--bdrRadius);
+  color: var(--darkTxt);
+  font: var(--mediumFont);
+  box-shadow: inset 0px 0px 2px grey;
+  background-color: aliceblue;
+}
+
+/* task text */
+.list-item p.checked {
+  text-decoration: line-through;
+}
+
+/* three dot menu icon */
+.three-dots {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* menu */
+.menu {
+  position: absolute;
+  top: 5px;
+  right: 18px;
+  display: inline-block;
+  border-radius: var(--bdrRadius);
+  padding: 2px;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 1px grey;
+  transition: 0.3s;
+  transform: scale(0);
+  transform-origin: top right;
+  z-index: 10;
+}
+
+.menu.active {
+  transform: scale(1);
+}
+
+/* menu buttons */
+.menu-btn {
+  display: block;
+  padding: 2px 3px;
+  color: var(--darkTxt);
+  font: var(--mediumFont);
+}
+
+.menu-btn:hover {
+  background-color: lightgrey;
+}
+
+/* default text if tasklist is empty */
+.default-txt{
+  padding: 6px 10px;
+  margin: 5px 0px;
+}
+
+/* ---------------------------------------------------- */
+@media(min-width: 481px) {
+
+  #container {
+    width: 380px;
+    padding: 25px 30px;
+  }
+}
+
+/* ---------------------------------------------------- */
+@media(min-width: 768px) {
+
+  :root {
+    --mediumFont: 500 16px 'Oswald', sans-serif;
+    --largeFont: 700 22px 'arial', sans-serif;
+  }
+
+  #container {
+    width: 550px;
+    padding: 30px 35px;
+  }
+
+  #heading {
+    margin-bottom: 15px;
+  }
+
+  #input-division {
+    flex-direction: row;
+  }
+
+  #text-box {
+    flex: 5;
+  }
+
+  #btn-container {
+    flex: 5;
+  }
+
+  .btn {
+    padding: 5px 8px;
+  }
+
+  #add-btn {
+    flex: 5;
+  }
+
+  #clr-btn {
+    flex: 5;
+  }
+
+}

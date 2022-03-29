@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <!-- boxicons stylesheet -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- custom css stylesheet link -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- theme button -->
+    <span id="theme-toggler" title="toggle theme"><i class="bx bx-bulb"></i></span>
+    <div id="calculator">
+      <!-- display screen -->
+      <div id="display-container">
+        <input type="text" id="display-screen" disabled />
+        <input type="text" id="last-ans" disabled/>
+      </div>
+      <input type="checkbox" id="input-mode" checked />
+      <!-- buttons container -->
+      <div id="btns-container">
+        <!-- row 1 -->
+        <label for="input-mode" class="lbl" id="radian">Rad</label>
+        <label for="input-mode" class="lbl" id="degree">Deg</label>
+        <input type="button" class="btn" id="clear" value="AC" />
+        <!-- row 2 -->
+        <input type="button" class="btn" id="sqrt" value="√" />
+        <input type="button" class="btn" id="cubrt" value="∛" />
+        <input type="button" class="btn" id="square" value="x²" />
+        <input type="button" class="btn" id="cube" value="x³" />
+        <input type="button" class="btn" id="del" value="CE" />
+        <!-- row 3 -->
+        <input type="button" class="btn num-btn" id="pi" value="π" />
+        <input type="button" class="btn num-btn" id="log" value="log10" />
+        <input type="button" class="btn num-btn" id="openbrkt" value="(" />
+        <input type="button" class="btn num-btn" id="closebrkt" value=")" />
+        <input type="button" class="btn num-btn" id="plus" value="+" />
+        <!-- row 4 -->
+        <input type="button" class="btn num-btn" id="sin" value="sin" />
+        <input type="button" class="btn num-btn" id="seven" value="7" />
+        <input type="button" class="btn num-btn" id="eight" value="8" />
+        <input type="button" class="btn num-btn" id="nine" value="9" />
+        <input type="button" class="btn num-btn" id="minus" value="-" />
+        <!-- row 5 -->
+        <input type="button" class="btn num-btn" id="cos" value="cos" />
+        <input type="button" class="btn num-btn" id="four" value="4" />
+        <input type="button" class="btn num-btn" id="five" value="5" />
+        <input type="button" class="btn num-btn" id="six" value="6" />
+        <input type="button" class="btn num-btn" id="multiply" value="x" />
+        <!-- row 6 -->
+        <input type="button" class="btn num-btn" id="tan" value="tan" />
+        <input type="button" class="btn num-btn" id="one" value="1" />
+        <input type="button" class="btn num-btn" id="two" value="2" />
+        <input type="button" class="btn num-btn" id="three" value="3" />
+        <input type="button" class="btn num-btn" id="divide" value="/" />
+        <!-- row 7 -->
+        <input type="button" class="btn num-btn" id="answer" value="Ans" />
+        <input type="button" class="btn num-btn" id="dot" value="." />
+        <input type="button" class="btn num-btn" id="zero" value="0" />
+        <input type="button" class="btn" id="evaluate" value="=" />
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      Made by
+      <a href="https://www.linkedin.com/in/ganesanrajalingam/" target="_blank">
+        <strong>&#9658;Ganesan R&#9668;</strong>
+      </a>
+      &#169; 2022.
+    </footer>
+    <!-- custom javascript link -->
+    <script src="./script.js"></script>
+  </body>
+</html>
